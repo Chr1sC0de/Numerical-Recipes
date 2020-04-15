@@ -1,0 +1,6 @@
+/*
+    requirements:
+        savgol coefficients
+        convolve
+
+*/

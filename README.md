@@ -1,2 +1,2 @@
 # Numerical-Recipes
-Implementation of some numerical recipes
+Implementation of some numerical recipes from book, for pedagological reasons

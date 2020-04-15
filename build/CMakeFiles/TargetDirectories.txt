@@ -1,0 +1,4 @@
+F:/GitHub/Numerical-Recipes/build/CMakeFiles/edit_cache.dir
+F:/GitHub/Numerical-Recipes/build/CMakeFiles/base.dir
+F:/GitHub/Numerical-Recipes/build/CMakeFiles/types.dir
+F:/GitHub/Numerical-Recipes/build/CMakeFiles/rebuild_cache.dir
