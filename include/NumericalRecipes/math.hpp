@@ -2,10 +2,9 @@
 
 namespace NumericalRecipes {
 namespace math {
-
-
+    //--------------------------------------------------------------------------------------
     double ln_gamma(const double xx){
-        double, tmp, y, ser;
+        double  x, tmp, y, ser;
         static const double cof[14] = {
             57.1562356658629235, -59.5979603554754912, 14.1360979747417471,
             -0.491913816097620199, .339946499848118887e-4,
@@ -34,7 +33,7 @@ namespace math {
     double factorial(const int n){
         static VectorDouble a(171);
         static Bool init = true;
-        if (init){
+        if (init) {
             init = false;
             a[0] = 1.0;
             for (int i=1; i<171; i++)
@@ -59,6 +58,19 @@ namespace math {
         if (n<NTOP)
             return a[n];
         return ln_gamma(n+1.0);
+    }
+    //--------------------------------------------------------------------------------------
+    double binomial_coefficient(const int n, const int k){
+        if (n<0 || k<0 || k>n)
+            throw ("bad args in binomial coefficients");
+        if (n<171)
+            return floor (
+                0.5+factorial(n)/(factorial(k)*factorial(n-k))
+            );
+        return floor(
+            0.5 * exp(
+                ln_factorial(n) + ln_factorial(k) - ln_factorial(n-k)
+            );
     }
 
 }
