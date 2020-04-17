@@ -92,7 +92,11 @@ namespace  linear_algebra{
         }
 
     }
-
-
+    //----------------------------------------------------------------------------
+    template <class T>
+    void gauss_jordan_elimination_full_pivoting (Matrix2d_t<T> & a) {
+        Matrix2d_t<T> b(a.nrows(), 0);
+        gauss_jordan_elimination_full_pivoting(a, b);
+    }
 }
 }
