@@ -3,5 +3,6 @@
     "files.associations": {
         "vector": "cpp",
         "ios": "cpp"
-    }
+    },
+    "C_Cpp.default.configurationProvider": "vector-of-bool.cmake-tools"
 }
