@@ -5,7 +5,7 @@ namespace NumericalRecipes{
 namespace  linear_algebra{
 
     namespace {
-        types;
+        using namespace types;
     }
 
     template <class T>

@@ -2,7 +2,8 @@
     "C_Cpp.errorSquiggles": "Disabled",
     "files.associations": {
         "vector": "cpp",
-        "ios": "cpp"
+        "ios": "cpp",
+        "xstring": "cpp"
     },
     "C_Cpp.default.configurationProvider": "vector-of-bool.cmake-tools"
 }
