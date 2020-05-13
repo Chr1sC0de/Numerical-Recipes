@@ -3,11 +3,9 @@
 
 namespace NumericalRecipes {
 namespace math {
-
     namespace {
         using namespace types;
     }
-
     //--------------------------------------------------------------------------------------
     double ln_gamma(const double xx){
 

@@ -14,7 +14,7 @@ foreach(file ${test_files})
 
     target_include_directories(${filename_component} PUBLIC "include")
 
-    target_link_libraries(${filename_component} PRIVATE ${VTK_LIBRARIES})
+    # target_link_libraries(${filename_component} PRIVATE ${VTK_LIBRARIES})
 
     if(OpenMP_CXX_FOUND)
         target_link_libraries(${filename_component} PUBLIC OpenMP::OpenMP_CXX)
