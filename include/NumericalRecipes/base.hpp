@@ -68,11 +68,13 @@ namespace NumericalRecipes {
     //---------------------------------------------------------------------------------------
     template <class T>
     class Vector_t {
+
         private:
             // Size of array, indices 0..nn-1.
             int nn;
             // Pointer to data array.
             T *v;
+
         public:
             // Make T available.
             typedef T value_type;

@@ -32,15 +32,15 @@ endforeach()
 
 # the source files to be built
 
+add_subdirectory(pybind11)
+
 foreach(file ${pybindfiles})
 
     get_filename_component(filename_component ${file} NAME_WE)
 
-    add_executable(${filename_component} ${file})
+    pybind11_add_module(${filename_component} ${SOURCES} ${file})
 
     target_include_directories(${filename_component} PUBLIC "include")
-
-    # target_link_libraries(${filename_component} PRIVATE ${VTK_LIBRARIES})
 
     target_link_libraries(${filename_component} ${Boost_LIBRARIES})
 

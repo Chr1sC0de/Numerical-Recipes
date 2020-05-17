@@ -83,8 +83,56 @@ CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=/debug /INCREMENTAL
 //No help, variable specified on the command line.
 CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE
 
+//User executables (bin)
+CMAKE_INSTALL_BINDIR:PATH=bin
+
+//Read-only architecture-independent data (DATAROOTDIR)
+CMAKE_INSTALL_DATADIR:PATH=
+
+//Read-only architecture-independent data root (share)
+CMAKE_INSTALL_DATAROOTDIR:PATH=share
+
+//Documentation root (DATAROOTDIR/doc/PROJECT_NAME)
+CMAKE_INSTALL_DOCDIR:PATH=
+
+//C header files (include)
+CMAKE_INSTALL_INCLUDEDIR:PATH=include
+
+//Info documentation (DATAROOTDIR/info)
+CMAKE_INSTALL_INFODIR:PATH=
+
+//Object code libraries (lib)
+CMAKE_INSTALL_LIBDIR:PATH=lib
+
+//Program executables (libexec)
+CMAKE_INSTALL_LIBEXECDIR:PATH=libexec
+
+//Locale-dependent data (DATAROOTDIR/locale)
+CMAKE_INSTALL_LOCALEDIR:PATH=
+
+//Modifiable single-machine data (var)
+CMAKE_INSTALL_LOCALSTATEDIR:PATH=var
+
+//Man documentation (DATAROOTDIR/man)
+CMAKE_INSTALL_MANDIR:PATH=
+
+//C header files for non-gcc (/usr/include)
+CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
+
 //Install path prefix, prepended onto install directories.
 CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/NumericalRecipes
+
+//Run-time variable data (LOCALSTATEDIR/run)
+CMAKE_INSTALL_RUNSTATEDIR:PATH=
+
+//System admin executables (sbin)
+CMAKE_INSTALL_SBINDIR:PATH=sbin
+
+//Modifiable architecture-independent data (com)
+CMAKE_INSTALL_SHAREDSTATEDIR:PATH=com
+
+//Read-only single-machine data (etc)
+CMAKE_INSTALL_SYSCONFDIR:PATH=etc
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.25.28610/bin/Hostx64/x64/link.exe
@@ -213,6 +261,35 @@ OpenMP_C_FLAGS:STRING=-openmp
 //C compiler libraries for OpenMP parallelization
 OpenMP_C_LIB_NAMES:STRING=
 
+//C++ standard flag, e.g. -std=c++11, -std=c++14, /std:c++14. 
+// Defaults to C++14 mode.
+PYBIND11_CPP_STANDARD:STRING=/std:c++14
+
+//Install pybind11 header files?
+PYBIND11_INSTALL:BOOL=OFF
+
+//Python version to use for compiling modules
+PYBIND11_PYTHON_VERSION:STRING=
+
+//Build pybind11 test suite?
+PYBIND11_TEST:BOOL=OFF
+
+//Path to a program.
+PYTHON_EXECUTABLE:FILEPATH=C:/Program Files (x86)/Microsoft Visual Studio/Shared/Python37_64/python.exe
+
+//Install pybind11 headers in Python include directory instead
+// of default installation prefix
+USE_PYTHON_INCLUDE_DIR:BOOL=OFF
+
+//Value Computed by CMake
+pybind11_BINARY_DIR:STATIC=D:/Github/Numerical-Recipes/build/pybind11
+
+//Value Computed by CMake
+pybind11_SOURCE_DIR:STATIC=D:/Github/Numerical-Recipes/pybind11
+
+//Dependencies for the target
+savgol_LIB_DEPENDS:STATIC=general;C:/Program Files (x86)/Microsoft Visual Studio/Shared/Python37_64/libs/Python37.lib;
+
 
 ########################
 # INTERNAL cache entries
@@ -291,6 +368,38 @@ CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=D:/Github/Numerical-Recipes
+//ADVANCED property for variable: CMAKE_INSTALL_BINDIR
+CMAKE_INSTALL_BINDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_DATADIR
+CMAKE_INSTALL_DATADIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_DATAROOTDIR
+CMAKE_INSTALL_DATAROOTDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_DOCDIR
+CMAKE_INSTALL_DOCDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_INCLUDEDIR
+CMAKE_INSTALL_INCLUDEDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_INFODIR
+CMAKE_INSTALL_INFODIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_LIBDIR
+CMAKE_INSTALL_LIBDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_LIBEXECDIR
+CMAKE_INSTALL_LIBEXECDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_LOCALEDIR
+CMAKE_INSTALL_LOCALEDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_LOCALSTATEDIR
+CMAKE_INSTALL_LOCALSTATEDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_MANDIR
+CMAKE_INSTALL_MANDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_OLDINCLUDEDIR
+CMAKE_INSTALL_OLDINCLUDEDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_RUNSTATEDIR
+CMAKE_INSTALL_RUNSTATEDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_SBINDIR
+CMAKE_INSTALL_SBINDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_SHAREDSTATEDIR
+CMAKE_INSTALL_SHAREDSTATEDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_SYSCONFDIR
+CMAKE_INSTALL_SYSCONFDIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER
 CMAKE_LINKER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MAKE_PROGRAM
@@ -308,7 +417,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MT
 CMAKE_MT-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
 //Platform information initialized
 CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_RC_COMPILER
@@ -360,6 +469,12 @@ FIND_PACKAGE_MESSAGE_DETAILS_OpenMP:INTERNAL=[TRUE][TRUE][c ][v()]
 FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_C:INTERNAL=[-openmp][v()]
 //Details about finding OpenMP_CXX
 FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_CXX:INTERNAL=[-openmp][v()]
+//Details about finding PYTHON
+FIND_PACKAGE_MESSAGE_DETAILS_PYTHON:INTERNAL=C:/Program Files (x86)/Microsoft Visual Studio/Shared/Python37_64/python.exe
+//Details about finding PythonInterp
+FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[C:/Program Files (x86)/Microsoft Visual Studio/Shared/Python37_64/python.exe][v3.7.5()]
+//Test HAS_MSVC_GL_LTCG
+HAS_MSVC_GL_LTCG:INTERNAL=1
 //Result of TRY_COMPILE
 OpenMP_COMPILE_RESULT_CXX_openmp:INTERNAL=TRUE
 //Result of TRY_COMPILE
@@ -380,6 +495,20 @@ OpenMP_C_SPEC_DATE:INTERNAL=200203
 OpenMP_SPECTEST_CXX_:INTERNAL=TRUE
 //Result of TRY_COMPILE
 OpenMP_SPECTEST_C_:INTERNAL=TRUE
+PYBIND11_INCLUDE_DIR:INTERNAL=D:/Github/Numerical-Recipes/pybind11/include
+PYBIND11_LTO_CXX_FLAGS:INTERNAL=/GL
+PYBIND11_LTO_LINKER_FLAGS:INTERNAL=-LTCG
+PYBIND11_VERSION_MAJOR:INTERNAL=2
+PYBIND11_VERSION_MINOR:INTERNAL=4
+PYBIND11_VERSION_PATCH:INTERNAL=dev4
+//ADVANCED property for variable: PYTHON_EXECUTABLE
+PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
+PYTHON_INCLUDE_DIRS:INTERNAL=C:/Program Files (x86)/Microsoft Visual Studio/Shared/Python37_64/include
+PYTHON_LIBRARIES:INTERNAL=C:/Program Files (x86)/Microsoft Visual Studio/Shared/Python37_64/libs/Python37.lib
+PYTHON_MODULE_EXTENSION:INTERNAL=.cp37-win_amd64.pyd
+PYTHON_MODULE_PREFIX:INTERNAL=
+PYTHON_VERSION_MAJOR:INTERNAL=3
+PYTHON_VERSION_MINOR:INTERNAL=7
 //Components requested for this build tree.
 _Boost_COMPONENTS_SEARCHED:INTERNAL=
 //Last used Boost_INCLUDE_DIR value.
@@ -388,4 +517,6 @@ _Boost_INCLUDE_DIR_LAST:INTERNAL=C:/dev/boost/1.71.0
 _Boost_NAMESPACE_LAST:INTERNAL=boost
 //Last used Boost_USE_MULTITHREADED value.
 _Boost_USE_MULTITHREADED_LAST:INTERNAL=TRUE
+//CMAKE_INSTALL_PREFIX during last run
+_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Program Files (x86)/NumericalRecipes
 
