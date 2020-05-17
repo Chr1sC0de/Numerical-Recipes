@@ -13,6 +13,8 @@
 #include <fcntl.h>
 #include <string.h>
 #include <ctype.h>
+#include <unordered_map>
+
 
 namespace NumericalRecipes {
 
@@ -134,7 +136,9 @@ namespace NumericalRecipes {
                     return v[i];
             }
             // Return size of vector.
-            inline int size() const {return nn;}
+            inline int size() const {
+                return nn;
+            }
             // Resize, losing contents.
             void resize(int newn){
                 if (newn != nn) {
@@ -151,6 +155,31 @@ namespace NumericalRecipes {
                     v = nn > 0 ? new T[nn] : NULL;
                 }
                 for (int i=0;i<nn;i++) v[i] = a;
+            }
+            // append to the end of the vector
+            void push_back(T val){
+
+                if (nn > 0) {
+
+                    T *temp = v;
+
+                    v = new T[++nn];
+
+                    for (int i=0; i < nn; i++)
+                        v[i] = temp[i];
+                    
+                    v[nn++] = val;
+
+                } else {
+
+                    v = new T[1];
+                    
+                    v[0] = val;
+
+                    nn++;
+
+                }
+                
             }
             // Destructor.
             ~Vector_t(){

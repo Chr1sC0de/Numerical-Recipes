@@ -45,6 +45,9 @@ namespace types {
 
     typedef const Matrix2d_t<ComplexDouble> Matrix2dComplexDouble_I;
     typedef Matrix2d_t<ComplexDouble> Matrix2dComplexDouble, Matrix2dComplexDouble_O, Matrix2dComplexDouble_IO;
+    //----------------------------------------------------------------------------------------------------------------------
+    typedef const Vector_t<string> VectorString_I;
+    typedef Vector_t<string> VectorString, VectorString_O, VectorString_IO;
 
 }
 }

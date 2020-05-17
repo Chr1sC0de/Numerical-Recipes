@@ -2,6 +2,7 @@
 #include <NumericalRecipes/types.hpp>
 
 namespace NumericalRecipes {
+
 namespace linear_algebra {
 
     namespace {
