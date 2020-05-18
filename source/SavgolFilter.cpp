@@ -55,6 +55,11 @@ PYBIND11_MODULE(SavgolFilter, m){
 
     py::class_<SavitzkyGolayFilter>(m, "SavitzkyGolayFilter")
         .def(py::init<int, int, int, int>(), py::arg("nl"), py::arg("nr"), py::arg("ld"), py::arg("m"))
+        .def(
+            "__call__",
+            []()
+        )
+    ;
 
 }
 
