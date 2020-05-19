@@ -10,7 +10,7 @@ namespace statistics {
         using namespace types;
     }
 
-    namespace LUdcmp = linear_algebra::LU_decomposition
+    typedef typename linear_algebra::LU_decomposition LUdcmp;
 
     void savgol(
         VectorDouble_O &c,
@@ -35,10 +35,10 @@ namespace statistics {
             double sum = (ipj ? 0.0 : 1.0);
 
             for (int k=1; k<=nr; k++)
-                sum += pow(double(k), double(ikj))
+                sum += pow(double(k), double(ipj));
             
             for (int k=1; k<=nl; k++)
-                sum += pow(double(-k), double(ikj))
+                sum += pow(double(-k), double(ipj));
 
             int mm = MIN(ipj, 2*m-ipj);
 
@@ -67,9 +67,9 @@ namespace statistics {
             for (int mm=1; mm<=m; mm++)
                 sum += b[mm] * (fac *= k);
             
-            kk = (np - k) % np;
+            int kk = (np - k) % np;
 
-            c[kk] = sum
+            c[kk] = sum;
         }
 
     }
