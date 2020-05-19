@@ -3,7 +3,11 @@
     "files.associations": {
         "vector": "cpp",
         "ios": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "cmath": "cpp",
+        "complex": "cpp",
+        "valarray": "cpp"
     },
-    "C_Cpp.default.configurationProvider": "vector-of-bool.cmake-tools"
+    "C_Cpp.default.configurationProvider": "vector-of-bool.cmake-tools",
+    "python.pythonPath": "c:\\Users\\cmamon\\Documents\\GitHub\\Numerical-Recipes\\_env\\Scripts\\python.exe"
 }
