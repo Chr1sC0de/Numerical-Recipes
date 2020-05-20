@@ -33,10 +33,11 @@ class SavitzkyGolayFilter {
 
         void __call__(double * ptr, double * output, int size){
 
-            int output_size = size - nl - nr;
+            int output_size(size - nl - nr);
+            int coeff_size(_coeffs.size());
 
             for (int i=0; i<output_size; i++){
-                for (int j=0; j<_coeffs.size(); j++)
+                for (int j=0; j<coeff_size; j++)
                     output[i] += _coeffs[j] * ptr[i+j];
             }
         }
@@ -73,7 +74,7 @@ PYBIND11_MODULE(SavgolFilter, m){
 
                 double * ptr = (double *) buffer.ptr;
 
-                int output_size = size - self.n_left() - self.n_right();
+                int output_size(size - self.n_left() - self.n_right());
 
                 double * output_vector = new double[output_size];
 
